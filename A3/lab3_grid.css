@@ -13,13 +13,12 @@
 */
 
 
-/* Global Fonts Style */
+/* Global Structure Style */
 
 html {
     height: 100%;
     width: 95%;
     margin: auto;
-    padding: 0;
 }
 
 nav {
@@ -40,7 +39,9 @@ nav > ul > li > a {
 	display: block;
 }
 
-div{
+/* Grid Style */
+
+div {
     outline: 1px solid blue;
     height: 100%;
 }

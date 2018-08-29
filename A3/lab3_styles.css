@@ -23,6 +23,11 @@
 
 /* Structural Styles */
 
+header, ul, nav, li, a {
+    /* content-box is default */
+    box-sizing: border-box;
+}
+
 .cutimage {
     border: 0;
     padding: 0;
@@ -71,7 +76,6 @@ body {
     background-color: #E4E3CD;
 }
 
-
 /* Navigation Styles */
 
 header > nav {
@@ -91,23 +95,16 @@ nav > ul > li > a:hover {
     background-color: hsl(0, 0%, 42%, 0.7);
 }
 
+ul {
+    list-style-type: none;
+}
 
-/* Section Styles */
 
-
-
-/* Description List Styles */
+/* Description List Styles
 
 dd, dt {
     font-size: 1.1em;
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
 
-dt {
-    color: hsla(0, 0%, 0%, 0.5);
-}
-
-dd {
-    padding: 0 0 0.5em 0;
-    margin-left: 0px;
-}
+*/
