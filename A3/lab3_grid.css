@@ -1,7 +1,43 @@
-html, body {
+@charset "UTF-8";
+
+/*
+   Laboratory 2.
+   
+   PHCT Typographic Style Sheet
+   Author:  Luis Ángel Lucatero Villanueva
+            Natanael Pérez Bucio
+   Date:    08/22/2018
+   
+   Filename: lab3_styles.css
+
+*/
+
+
+/* Global Fonts Style */
+
+html {
     height: 100%;
-    margin: 0;
+    width: 95%;
+    margin: auto;
     padding: 0;
+}
+
+nav {
+	display: table;
+	width: 100%;
+}
+
+nav > ul {
+	display: table-row;
+}
+
+nav > ul > li {
+	display: table-cell;
+	text-align: center;
+}
+
+nav > ul > li > a {
+	display: block;
 }
 
 div{
