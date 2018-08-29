@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/*
+   Laboratory 2.
+   
+   PHCT Typographic Style Sheet
+   Author:  Luis Ángel Lucatero Villanueva
+            Natanael Pérez Bucio
+   Date:    08/22/2018
+   
+   Filename: lab3_styles.css
+
+*/
+
+
+/* Global Fonts Style */
+
+@font-face {
+    font-family: 'ChampagneFont';
+    src: url('cac_champagne.tff');
+    src: url('cac_champagne.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DobkinPlain';
+    src: url('DobkinPlain.tff');
+    src: url('DobkinPlain.woff') format('woff');
+}
+
+@font-face {
+    font-family: '1942';
+    src: url('1943.tff');
+    src: url('1942.woff') format('woff');
+}
+
+
+/* Structural Styles */
+
+#play1 {
+    background-color: #BEC6E9;
+}
+
+#play1 > h1 {
+    font-family: 'ChampagneFont';
+}
+
+#play2 {
+    background-color: #F7B98A;
+}
+
+#play2 > h1 {
+    font-family: '1942';
+}
+
+#play3 {
+    background-color: #F39891;
+}
+
+#play4 {
+    background-color: #D6C9E4;
+}
+
+#play4 > h1 {
+    font-family: 'DobkinPlain';
+}
+
+p {
+    margin: 0px;
+    padding: 5px 25px 25px 25px; /* top right buttom left*/
+}
+
+h1 {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+body > p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+html {
+    background-color: #9AA492;
+}
+
+body {
+    background-color: #E4E3CD;
+}
+
+
+/* Navigation Styles */
+
+header > nav {
+    background-color: #4F4F51;
+}
+
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
+
+nav > ul > li > a:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsl(0, 0%, 42%, 0.7);
+}
+
+
+/* Section Styles */
+
+
+
+/* Description List Styles */
+
+dd, dt {
+    font-size: 1.1em;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+dt {
+    color: hsla(0, 0%, 0%, 0.5);
+}
+
+dd {
+    padding: 0 0 0.5em 0;
+    margin-left: 0px;
+}
