@@ -28,8 +28,9 @@ header, ul, nav, li, a {
     box-sizing: border-box;
 }
 
-body {
-    height: 100%;
+html {
+    width: 95%;
+    margin: auto;
 }
 
 header {
@@ -42,15 +43,21 @@ header {
     float: left;
     width: 70%;
     height: 100%;
+    margin-right: 20px;
 }
 
 .listhead > li{
-    margin: 1%;
+    vertical-align: center;
+    margin-top: 10px;
 }
 
 ul > li > a {
     text-decoration: none;
     color: white;
+}
+
+ul > li > a:hover {
+    color: blue;
 }
 
 html {
@@ -61,13 +68,21 @@ body {
     background-color: #E4E3CD;
 }
 
+.extension-body {
+    background-color: #E4E3CD;
+}
+
 ul {
     list-style-type: none;
 }
 
+.wrap-img {
+    height: 100px;
+}
+
 /* Navigation Styles */
 
-header > nav {
+.nav-header {
     background-color: #4F4F51;
 }
 
