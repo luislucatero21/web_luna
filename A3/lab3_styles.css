@@ -37,6 +37,9 @@ header {
     height: 240px;
 }
 
+.up-space{
+    margin-top: 20px;
+}
 
 body::after {
     clear: both;
@@ -64,6 +67,15 @@ body::after {
 .center-txt {
     text-align: center;
     color: blue;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    width: 60%;
+    background-color: blue;
+    height: 1px;
 }
 
 div.wrap {
@@ -74,8 +86,18 @@ div.wrap {
     width: 90%;
 }
 
+div.wrap2 {
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
 .avatar {
-    height: 60px;
+    float: left;
+    width: 20%;
     border-radius: 50%
 }
 
