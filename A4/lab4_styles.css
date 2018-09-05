@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 
 /*
@@ -9,3 +10,8 @@
    
    Filename: lab4_styles.css
 */
+=======
+body{
+    background-image: url("background.jpg");
+}
+>>>>>>> cbc6f9aadeaf8b47b9db3f778d6f402c442f6b79
