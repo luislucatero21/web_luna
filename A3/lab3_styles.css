@@ -19,6 +19,12 @@
     src: url('cac_champagne.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'DobkinPlain';
+    src: url('DobkinPlain.tff');
+    src: url('DobkinPlain.woff') format('woff');
+}
+
 /* Structural Styles */
 
 header, ul, nav, li, a {
@@ -105,7 +111,14 @@ div.wrap2 {
     padding-top: 5px;
 }
 
+.listhead{
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
 .listhead > li{
+    font-weight: bold;
+    font-size: 120%;
     vertical-align: center;
     margin-top: 10px;
 }
@@ -131,6 +144,17 @@ ul {
     list-style-type: none;
 }
 
+<<<<<<< HEAD
+.wrap-img {
+    height: 100px;
+}
+
+div.col-1-4{
+    font-family: ChampagneFont;
+}
+
+=======
+>>>>>>> 923d381ab4f0e84b9ae93091c40f43e5289c9dc8
 /* Navigation Styles */
 
 .nav-header {
