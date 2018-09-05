@@ -9,13 +9,11 @@
 */
 
 html{
-    width: 1000px;
-    margin: auto;
-    display: block;
     background-image: url("background.jpg");
 }
 
 body{
+    margin: auto;
     width: 1000px;
     /*background-image: url("background.jpg");
     background-size: cover;*/
@@ -62,6 +60,11 @@ nav > ul > li > a:hover {
 
 /* Header Style */
 
+header{
+    
+}
+
 .logoimage{
     width: 200px;
+    float: left;
 }
