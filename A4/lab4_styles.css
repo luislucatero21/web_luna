@@ -1,4 +1,67 @@
-body{
+/*
+   Laboratory 4.
+   
+   Authors: Natanael Pérez Bucio - A01371010
+            Luis Ángel Lucatero - A01020507
+   Date:   05/09/2018
+   
+   Filename: lab4_styles.css
+*/
+
+html{
+    width: 1000px;
+    margin: auto;
+    display: block;
     background-image: url("background.jpg");
-    background-size: cover;
+}
+
+body{
+    width: 1000px;
+    /*background-image: url("background.jpg");
+    background-size: cover;*/
+    background-color: blueviolet;
+    background-size: 100%;
+
+}
+
+/*Menu style*/
+
+nav {
+	display: table;
+    width: 100%;
+}
+
+nav > ul {
+	display: table-row;
+}
+
+nav > ul > li {
+	display: table-cell;
+	text-align: center;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: hsla(0, 0%, 42%, 0.4);
+}
+
+.menuimage {
+    width: 35px;
+}
+
+nav > ul > li > a:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+    background-color: hsl(0, 0%, 42%, 0.7);
+}
+
+.nav-header {
+    background-color: #103E86;
+}
+
+/* Header Style */
+
+.logoimage{
+    width: 200px;
 }
