@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
 /*
-   Laboratory 2.
+   Laboratory 3.
    
-   PHCT Typographic Style Sheet
-   Author:  Luis Ángel Lucatero Villanueva
+   Authors:  Luis Ángel Lucatero Villanueva A01020507
             Natanael Pérez Bucio
    Date:    08/22/2018
    
    Filename: lab3_styles.css
-
 */
 
 
@@ -40,16 +38,55 @@ html {
 }
 
 header {
+    display: block;
     background-color: cadetblue;
-    height: 40%;
-    min-height: 180px;
+    height: 240px;
 }
 
-.cutimage {
+
+body::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.cutlogo {
     float: left;
     width: 70%;
-    height: 100%;
     margin-right: 20px;
+    height: 240px;
+}
+
+.wrap-img {
+    width: 30%;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-txt {
+    text-align: center;
+    color: blue;
+}
+
+div.wrap {
+    padding: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.avatar {
+    height: 60px;
+    border-radius: 50%
+}
+
+.listhead {
+    padding-top: 5px;
 }
 
 .listhead{
@@ -81,14 +118,11 @@ body {
     background-color: #E4E3CD;
 }
 
-.extension-body {
-    background-color: #E4E3CD;
-}
-
 ul {
     list-style-type: none;
 }
 
+<<<<<<< HEAD
 .wrap-img {
     height: 100px;
 }
@@ -97,6 +131,8 @@ div.col-1-4{
     font-family: ChampagneFont;
 }
 
+=======
+>>>>>>> 923d381ab4f0e84b9ae93091c40f43e5289c9dc8
 /* Navigation Styles */
 
 .nav-header {
