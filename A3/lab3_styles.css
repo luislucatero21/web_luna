@@ -38,13 +38,23 @@ html {
 }
 
 header {
-    display: block;
-    background-color: cadetblue;
+    background-color: #389AD9;
     height: 240px;
 }
 
+footer {
+    background-color: #389AD9;
+}
+
+footer > p {
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
 .up-space{
-    margin-top: 20px;
+    margin-top: 10px;
+    position: relative;
 }
 
 body::after {
@@ -71,11 +81,19 @@ body::after {
 }
 
 .center-txt {
-    text-align: center;
+    text-align: justify;
     color: blue;
-    width: 95%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.p-box {
+    float: right;
+    text-align: justify;
+    color: blue;
+    width: 70%;
+    margin-right: 30px;
 }
 
 hr {
@@ -100,11 +118,14 @@ div.wrap2 {
     width: 80%;
 }
 
-
 .avatar {
     float: left;
     width: 20%;
-    border-radius: 50%
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin: auto;
 }
 
 .listhead {
@@ -117,8 +138,6 @@ div.wrap2 {
 }
 
 .listhead > li{
-    font-weight: bold;
-    font-size: 120%;
     vertical-align: center;
     margin-top: 10px;
 }
@@ -133,11 +152,11 @@ ul > li > a:hover {
 }
 
 html {
-    background-color: #9AA492;
+    background-color: #E7BB9A;
 }
 
 body {
-    background-color: #E4E3CD;
+    background-color: #F9F1DB;
 }
 
 ul {
@@ -155,7 +174,7 @@ div.col-1-4{
 /* Navigation Styles */
 
 .nav-header {
-    background-color: #4F4F51;
+    background-color: #103E86;
 }
 
 nav > ul > li > a {
