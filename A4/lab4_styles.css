@@ -42,12 +42,20 @@ nav > ul > li > a {
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: hsla(0, 0%, 42%, 0.4);
+    /*background-color: hsla(0, 0%, 42%, 0.4);*/
 }
 
-.menuimage {
-    width: 35px;
+.menuimage{
+    height: 30px;
+    
 }
+
+.a_menuimage {
+    height: 100%;
+    padding: 0;
+}
+
+
 
 nav > ul > li > a:hover {
     color: hsla(0, 0%, 100%, 0.7);
@@ -56,15 +64,20 @@ nav > ul > li > a:hover {
 
 .nav-header {
     background-color: #103E86;
+    position: absolute;
+    bottom: 0px;
 }
 
 /* Header Style */
 
 header{
-    
+    height: 300px;
+    position: relative;
 }
 
 .logoimage{
-    width: 200px;
+    height: 200px;
     float: left;
+    position: absolute;
+    bottom: 20px;
 }
