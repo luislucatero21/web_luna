@@ -39,7 +39,7 @@ html {
 
 header {
     background-color: #389AD9;
-    height: 240px;
+    height: 320px;
     position: relative;
 }
 
@@ -95,7 +95,7 @@ body::after {
     float: left;
     width: 70%;
     margin-right: 20px;
-    height: 240px;
+    height: 320px;
 }
 
 .wrap-img {
@@ -197,6 +197,7 @@ ul {
 
 div.col-1-4{
     font-family: ChampagneFont;
+    font-size: 135%;
 }
 
 /* Navigation Styles */
