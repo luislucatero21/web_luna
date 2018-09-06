@@ -42,6 +42,7 @@ header{
     height: 260px;
     position: relative;
     width: 100%;
+    background-color: rgba(49, 49, 49, 0.5);
 }
 
 .logoimage{
@@ -81,6 +82,9 @@ header{
 #logo-text {
     width: 100%;
     text-align: center;
+    font-family: Rufina-Bold;
+    color: white;
+    transform: scaleX(1.8) scaleY(1.1);
 }
 
 
