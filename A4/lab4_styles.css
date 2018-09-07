@@ -236,6 +236,7 @@ div.text-box{
     overflow:hidden;
     border-radius:20px;
     border-style: double;
+    margin: 20px;
 }
 
 div.header-text-box{
@@ -247,11 +248,18 @@ div.header-text-box{
 
 div.body-text-box{
     background-color: lightblue;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 50%;
-    width: 200px;
+    padding: 10px;
     overflow: hidden;
-    text-align: left;
 } 
+
+.cosas{
+    width:100%;
+}
+
+#one{
+    transform: perspective(250px) rotateY(20deg);
+}
+
+#two{
+    transform: perspective(250px) rotateY(-20deg);
+}
