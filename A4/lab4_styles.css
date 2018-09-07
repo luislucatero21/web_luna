@@ -250,6 +250,8 @@ div.body-text-box{
     padding-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 50%;
     width: 200px;
     overflow: hidden;
-}
+    text-align: left;
+} 
