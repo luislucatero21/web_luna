@@ -228,3 +228,16 @@ div.col-2-5 {
 div.col-3-5 {
     width: 60%;
 }
+
+div.text-box{
+    border-style: double;
+    border-radius: 60px;
+}
+
+div.header-text-box{
+    background-color: gray;
+}
+
+div.body-text-box{
+    background-color: lightblue;
+}
