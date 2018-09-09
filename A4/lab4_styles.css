@@ -257,9 +257,9 @@ div.body-text-box{
 }
 
 #one{
-    transform: perspective(250px) rotateY(20deg);
+    transform: perspective(250px) rotateY(30deg);
 }
 
 #two{
-    transform: perspective(250px) rotateY(-20deg);
+    transform: perspective(250px) rotateY(-30deg);
 }
