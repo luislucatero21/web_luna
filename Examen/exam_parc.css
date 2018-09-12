@@ -13,15 +13,46 @@ body{
     
 }
 
+ul {
+    z-index: 1;
+    float: top left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    font-size: 130%;
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    color: #ffffff;
+}
+
 header{
     position: relative;
-    height: 1000px;
+    height: 800px;
     background-color: #ffffff;
 }
 
 header h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 4em;
+    padding-top: 3em;
     font-size: 600%;
 }
 
@@ -51,35 +82,6 @@ hr {
 }
   
 
-ul {
-    z-index: 1;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-li {
-    font-size: 150%;
-    float: right;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-    color: #ffffff;
-}
 
 .col-1-4-image {
     float: left;
@@ -190,18 +192,18 @@ div > img{
 
   .col-1-4-footer > p{
       font-family: 'Times New Roman', Times, serif;
-      font-size: 150%;
+      font-size: 130%;
   }
 
   .col-1-4-footer #one{
-      font-size: 160%;
+      font-size: 140%;
       font-weight: bold;
   }
 
   footer div h2{
-      padding-top: 50px; 
+      padding-top: 12%; 
       padding-bottom: 30px;
-      font-size: 170%;
+      font-size: 140%;
       text-transform: uppercase;
   }
 
@@ -230,6 +232,6 @@ div > img{
   }
 
   .footer-h1{
-      font-size: 380%;
+      font-size: 270%;
       color: #ffffff;
   }
