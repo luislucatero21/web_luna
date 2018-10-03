@@ -63,7 +63,6 @@ header{
     font-size: 6em;
     font-family: Anton-Regular;
     color: #007F8F;
-    /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
     text-shadow: 4px 8px 4px #38525F;
     transform: scaleX(1.75) scaleY(1.3); 
 }
