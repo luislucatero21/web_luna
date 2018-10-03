@@ -9,26 +9,22 @@
    Filename: styles.css
 */
 
-/* Basic styles to be used with all devices and under all conditions */
 
-article, aside, figcaption, figure,
-footer, header, main, nav, section { 
+/* Clear styles for all devices */
+
+article, footer, header, nav, section { 
    display: block;
 }
 
-address, article, aside, blockquote, body, cite, 
-div, dl, dt, dd, em, figcaption, figure, footer, 
-h1, h2, h3, h4, h5, h6, header, html, img, 
-li, main, nav, nav a, ol, p, section, span, ul {
+article, body, footer, h1, header, html, img, 
+li, nav, nav a, p, section, ul {
    margin: 0;
    padding: 0;
    border: 0;
    font-size: 100%;
    vertical-align: baseline;
    background: transparent;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;  
+   box-sizing: border-box; 
 }
 
 
@@ -38,26 +34,13 @@ body {
    line-height: 1.2em;
 }
 
-ul, ol {
-   list-style: none;
-}
-
 nav ul {
    list-style: none;
-   list-style-image: none;
 }
 
 nav a {
    text-decoration: none;
 }
-
-
-
-/* =============================================
-	Base styles used by All Screens
-   =============================================
-*/
-
 
 html {
 	background-color: rgb(211, 255, 211);
@@ -100,7 +83,6 @@ nav.horizontal ul {
 	width: 100%;	
 }
 
-
 nav.horizontal li {
 	font-family: 'Comic Sans MS', cursive; 
 	font-size: 1.4em;
@@ -119,6 +101,7 @@ nav.horizontal li a:hover, nav.horizontal li a:active {
 	color: white;
 	background-color: rgb(51, 51, 51);
 }
+
 
 /* Article Styles */
 
@@ -141,20 +124,20 @@ article p {
 
 /* Comic Book Sheet Styles */
 
-section#sheet {
+section#comic {
 	border: 1px solid rgb(101, 101, 101);
 	background-color: white;
 	padding: 10px 10px 0px 10px;
 }	
 
-section#sheet h1 {
+section#comic h1 {
 	font-size: 1.4em;
 	text-align: center;
 	letter-spacing: 3px;
 	margin: 5px;
 }
 
-section#sheet footer {
+section#comic footer {
 	text-align: center;
 	width: 100%;
 	clear: left;
@@ -194,6 +177,7 @@ nav#pages a#current {
 	color: white;
 }
 
+
 /* Comic Image Panel Styles */
 
 img.panel {
@@ -213,89 +197,86 @@ body > footer {
 }
 
 
-
 /* Flex Layout Styles */
 
-
-body {display: -webkit-flex;
-    -webkit-flex-flow: row wrap;
+body {
     display:flex;
     flex-flow: row wrap;
     flex-direction:row;
-
 }
 
-
-body > #sheet {-webkit-flex: 3 1 301px;
-     flex: 3 1 301px;
-    
+body > #comic {-webkit-flex: 3 1 301px;
+    flex: 3 1 301px;
  }
  
-body > article{-webkit-flex: 0 3 160px; 
-      flex: 0 3 160px;
+body > article{
+    flex: 0 3 160px;
  }
  
-footer{display:flex; }
-/* ============================================
-	Mobile Devices: 0 - 480 pixels
-   ============================================
-*/
-@media only screen and (max-width: 480px) {
-
-img.panel { 
-width:100%; }
-
-.horizontal {
-   -webkit-order:99;
-   order:99;
-}
-
-#sheet  footer{
-   -webkit-order:100;
-   order:100 }
- 
+footer{
+    display:flex; 
 }
 
 
-/* ===================================================
-	Tablet and Desktop Devices: Greater than 480 pixels
-   ===================================================
-*/
+/* Mobile Devices: 0 - 481 pixels */
 
-@media only screen and (min-width: 481px ) { 
+@media only screen and (max-width: 481px) {
+    img.panel { 
+        width:100%; 
+    }
 
+    .horizontal {
+        order:99;
+    }
 
-
-
-nav.horizontal  ul {display: -webkit-flex;
-    display:flex;
-    -webkit-flex-flow: row wrap;    
-    flex-direction:row;      
-    flex-flow: row nowrap;
-    height:40px;
+    #comic footer {
+        order:100 
+    }
 }
-nav.horizontal > ul >  li {
-    display:flex;
-    -webkit-flex: 1 1 auto;
-    flex: 1 1 auto;
-}
- #sheet {display: -webkit-flex;
-    display:flex;
-    -webkit-flex-flow: row wrap;    
-    flex-direction:row;      
-    flex-flow: row wrap;
-    height:40px; }
+
+
+/* Only for screens greater than 481 pixels */
+
+@media only screen and (min-width: 482px ) { 
+
+    nav.horizontal  ul {display: -webkit-flex;
+        display:flex;
+        -webkit-flex-flow: row wrap;    
+        flex-direction:row;      
+        flex-flow: row nowrap;
+        height:40px;
+    }
+
+    nav.horizontal > ul >  li {
+        display:flex;
+        flex: 1 1 auto;
+    }
+
+    #comic {
+        display:flex;
+        flex-direction:row;      
+        flex-flow: row wrap;
+        height:40px; 
+    }
     
-
+    img.panel {
+        display: flex; 
+    }    
     
-img.panel {display: flex; }    
-    
-img.size1 { width: 100%; }
+    img.size1 { 
+        width: 100%; 
+    }
 
+    img.size2 {
+        flex: 60%; 
+    }
 
-img.size2 {flex: 60%; }
+    img.size3 {
+        flex: 40%; 
+    }
 
- img.size3 {flex: 40%; }
+    img.size4 {
+        flex: 30%; 
+    }
 
- img.size4 {flex: 30%; }
 }
