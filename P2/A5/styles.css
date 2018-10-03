@@ -73,7 +73,7 @@ body > header > img {
 /* Horizontal Navigation Styles */
 
 nav{
-	display: flex;
+	/*display: flex;*/
 	height: auto;
 	width: 100%;
 }
@@ -83,7 +83,7 @@ nav ul {
 	background-color: rgb(204, 170, 45);
 	text-align: center;
 	width: 100%;	
-	display: flex;
+	/*display: flex;*/
 	height: 40px;
 }
 
@@ -92,7 +92,7 @@ nav li {
 	font-size: 1.4em;
 	line-height: 2em;
 	list-style-type: none;
-	display: flex;
+	/*display: flex;*/
 	/*flex: 1 1 auto;*/
 }
 
@@ -236,7 +236,12 @@ footer{
 		order:99;
 	}
 
-	nav > ul > li{
+	nav > ul{
+		height: auto;
+	}
+
+	nav.horizontal {
+		height: auto;
 		width: 100%;
 	}
 
@@ -250,6 +255,14 @@ footer{
 	
 	footer{
 		order: 100;
+	}
+
+	body > article{
+		flex: auto;
+	}
+
+	article{
+		width: 100%;
 	}
 }
 
