@@ -40,33 +40,39 @@ body > header > img {
 
 /* Horizontal Navigation Styles */
 
-nav.horizontal {
+nav{
+	display: flex;
 	height: auto;
 	width: 100%;
 }
 
-nav.horizontal ul {
+nav ul {
+	padding:0;
 	background-color: rgb(212, 175, 55);
 	text-align: center;
 	width: 100%;	
+	display: flex;
+	height: 40px;
 }
 
 
-nav.horizontal li {
-	font-family: 'Comic Sans MS', cursive; 
+nav li {
+	font-family: 'Comic Sans MS', cursive;
 	font-size: 1.4em;
 	line-height: 2em;
-	list-style-type: none;	
-	width: 100%;
+	list-style-type: none;
+	display: flex;
+	flex: 1 1 auto;
 }
 
-nav.horizontal li a {
+nav li a {
+	text-decoration: none;
 	color: black;
 	display: block;
 	width: 100%;
 }
 
-nav.horizontal li a:hover, nav.horizontal li a:active {
+nav li a:hover, nav li a:active {
 	color: white;
 	background-color: rgb(51, 51, 51);
 }
