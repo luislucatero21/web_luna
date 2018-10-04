@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Fibo</title>
+	</head>
+	<body>
+		n: <input type="number" value="1" min="0" id="n"><br>
+		result: <var id="res">?</var><br>
+		<button onclick="run()">Calcular</button>
+	</body>
+	<script src="fibo.js"></script>
+	<script>
+		function run() {
+			MAX = 1500;
+			number = document.getElementById('n').value;
+			number = number > MAX ? MAX : number;
+			res = (number >= 0 && number) ? fibo(number) : "?";
+			document.getElementById('res').innerHTML = res;
+		}
+	</script>
+</html>
