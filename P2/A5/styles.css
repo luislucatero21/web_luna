@@ -284,6 +284,17 @@ img.section3 {
 	#comic_img {
 		height: 20px;
 	}
+
+	img.section1{
+		width: 100%;
+	}
+	img.section2{
+		width: 100%;
+	}
+	img.section3{
+		width: 100%;
+		margin: 0;
+	}
 }
 
 
