@@ -1,0 +1,328 @@
+@charset "utf-8";
+/*
+   Laboratory 5.
+   
+   Author:  Luis Ángel Lucatero Villanueva - A01020507
+            Natanael Pérez Bucio - A01371010
+   Date:    03/Oct/2018
+   
+   Filename: styles.css
+*/
+
+
+/* Clear styles for all devices */
+
+article, footer, header, nav, section { 
+   display: block;
+}
+
+article, body, footer, h1, header, html, img, 
+li, nav, nav a, p, section, ul {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+   box-sizing: border-box; 
+}
+
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+
+#title {
+	display: block;
+	margin: auto;
+	padding-top: 30px;
+    font-size: 5em;
+    font-family: Anton-Regular;
+    color: rgb(219, 208, 50);
+	text-shadow: 0px 0px 5px white;
+	transform: scaleX(1.6); 
+}
+
+nav ul {
+   list-style: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+html {
+	width: 100%;
+	background-color: #b3f0a4;
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+body {
+	background-color: #e7d6a0;
+	margin: 0px auto;
+	width: 100%;			   
+}
+	
+body > header {
+	background: url("images/logo_img.png") center center / cover no-repeat;
+	text-align: center;	
+	width: 100%;
+	height: 120px;
+}
+
+
+/* Horizontal Navigation Styles */
+
+nav{
+	height: auto;
+	width: 100%;
+}
+
+nav ul {
+	padding:0;
+	background-color: rgb(204, 170, 45);
+	text-align: center;
+	width: 100%;	
+	height: 40px;
+}
+
+nav li {
+	font-family: 'Comic Sans MS', cursive;
+	font-size: 1.4em;
+	line-height: 2em;
+	list-style-type: none;
+}
+
+nav li a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	width: 100%;
+}
+
+nav li a:hover, nav li a:active {
+	color: white;
+	background-color: rgb(51, 51, 51);
+}
+
+
+/* Article Styles */
+
+article {
+	padding: 10px;
+}
+	
+article h1 {
+	text-align: center;
+	font-size: 1.4em;
+	letter-spacing: 3px;
+}
+
+article p {
+	text-align: left;
+	font-size: 1.4em;
+	line-height: 1.2;
+	margin: 20px 0px;
+}
+
+
+/* Comic Book Sheet Styles */
+
+section#comic {
+	border: 1px solid rgb(101, 101, 101);
+	background-color: white;
+	padding: 10px 10px 0px 10px;
+}	
+
+section#comic h1 {
+	font-size: 1.4em;
+	text-align: center;
+	letter-spacing: 3px;
+	margin: 5px;
+}
+
+section#comic footer {
+	display: block;
+	text-align: center;
+	width: 100%;
+	clear: left;
+}
+
+
+/* Navigation Pages Styles */
+
+nav#pages {
+	padding-bottom: 10px;
+}
+
+nav#pages::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+nav#pages a {
+	background-color: rgb(242, 221, 174);
+	border: 1px solid rgb(101, 101, 101);
+	box-shadow: rgb(51, 51, 51) 2px 2px 5px;
+	display: block;
+	float: left;
+	margin: 4px;
+	padding: 2px;
+	text-align: center;
+	width: 20px;
+}
+
+nav#pages a:first-of-type {
+	width: 80px;
+}
+
+nav#pages a#current {
+	background-color: rgb(51, 51, 51);
+	color: white;
+}
+
+
+/* Comic Image Panel Styles */
+
+img.panel {
+   float: left;
+   display: block;
+}
+
+
+/* Body Footer Styles */
+
+body > footer {
+	display: block;
+	color: white;
+	background-color: rgb(51, 51, 51);
+	text-align: center;
+	line-height: 2em;
+	width: 100%;
+}
+
+
+/* Flex Layout Styles */
+
+body {
+    display:flex;
+    flex-flow: row wrap;
+    flex-direction:row;
+}
+ 
+footer{
+    display:flex; 
+}
+
+img.panel {
+	display: flex; 
+}    
+
+img.section1 { 
+	width: 100%; 
+}
+
+img.section2 { 
+	width: 60%; 
+}
+
+img.section3 { 
+	width: 35.6%; 
+	margin-left: 4.4%;
+}
+
+
+/* Mobile Devices: 0 - 481 pixels */
+
+@media only screen and (max-width: 481px) {
+	footer > a > img {
+		width: 30px;
+	}
+
+	body > footer {
+		font-size: 0.8em;
+	}
+
+	#title {
+		font-size: 3em;
+	}
+
+    img { 
+        width:100%; 
+    }
+
+    nav {
+		order:99;
+	}
+
+	nav > ul{
+		height: auto;
+	}
+
+	nav.horizontal {
+		height: auto;
+		width: 100%;
+	}
+
+	.col-menu{
+		width: 100%;
+	}
+
+    #comic > footer {
+        order:100;
+	}
+	
+	footer{
+		order: 100;
+	}
+
+	#comic_img {
+		height: 20px;
+	}
+
+	img.section1{
+		width: 100%;
+	}
+	img.section2{
+		width: 100%;
+	}
+	img.section3{
+		width: 100%;
+		margin: 0;
+	}
+}
+
+
+/* Only for screens greater than 481 pixels */
+
+@media only screen and (min-width: 481px ) { 
+
+	body{
+		width: 100%;
+	}
+
+    nav ul {
+        display:flex;
+        flex-direction:row;      
+        flex-flow: row nowrap;
+        height:40px;
+    }
+
+    nav > ul >  li {
+        display: flex;
+        flex: 1 1 auto;
+	}
+
+	body > #comic {
+		flex: 3 1 300px;
+	}
+	 
+	body > article{
+		flex: 0 3 280px;
+	}
+}
