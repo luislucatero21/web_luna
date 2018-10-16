@@ -1,0 +1,14 @@
+{
+  "name": "a7",
+  "version": "1.0.0",
+  "description": "Practica 7 de Diseño de aplicaciones web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Ángel Lucatero Villanueva A01020507 & Natanael Pérez Bucio - A01371010",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
