@@ -1,6 +1,7 @@
 var fibo_arr = [0, 1];
 
 function fibo(n){
+	
 	var res;
 	if(n in fibo_arr) {
 		res = fibo_arr[n];
