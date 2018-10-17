@@ -7,12 +7,26 @@ Date:   17/Oct/2018
 Filename: app.js
 */
 
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.get('/', (req, res) => res.send('Hello World!'))
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+var itemId;
+
+app.post('/setItem', function(req, res) {
+    itemId = req.body.id;
+    if (itemId) {
+        console.log('Element clicked: ' + req.body.name + " whith id: " + itemId);
+        res.sendStatus(200);
+    }
+});
+
+app.get('/item', (req, res) => res.send(itemId));
+
+app.listen(port, () => console.log(`Listening on port ${port}!`));

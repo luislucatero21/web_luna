@@ -22,11 +22,11 @@
 
     <nav class="horizontal" id="menu">
         <ul>
-            <li class="col-menu" id="1"><a href="#">Home</a></li>
-            <li class="col-menu" id="2"><a href="#">Comic Books</a></li>
-            <li class="col-menu" id="3"><a href="#">Characters</a></li>
-            <li class="col-menu" id="4"><a href="#">Artists</a></li>
-            <li class="col-menu" id="5"><a href="#">Writers</a></li>
+            <li class="col-menu" id="1"><a href="#menu">Home</a></li>
+            <li class="col-menu" id="2"><a href="#menu">Comic Books</a></li>
+            <li class="col-menu" id="3"><a href="#menu">Characters</a></li>
+            <li class="col-menu" id="4"><a href="#menu">Artists</a></li>
+            <li class="col-menu" id="5"><a href="#menu">Writers</a></li>
         </ul>
     </nav>
    
@@ -38,8 +38,8 @@
         <img src="images/section3.jpg" class="panel section3" alt=""/> 
         
         <footer>
-            <a href="#"><img src="images/left.png" alt="prev"/></a>
-            <a href="#"><img src="images/right.png" alt="next"/></a>
+            <a href="#comic"><img src="images/left.png" alt="prev"/></a>
+            <a href="#comic"><img src="images/right.png" alt="next"/></a>
         </footer>
     </section>
         
@@ -66,6 +66,7 @@
         var childs = menu.children[0].children;
         var states = ['Normal', 'Clicked', 'Hover'];
         setInitialStates();
+        get();
 
         menu.addEventListener("click", function(e){
             let target = e.target;
@@ -88,9 +89,11 @@
                 if (element.id == 'item'+i) {
                     el.state = states[1];
                     el.classList.add("clicked");
+                    post(el.text, i);
                 } else {
                     el.state = states[0];
                     el.classList.remove("clicked");
+                    el.classList.remove("hover");
                 }
             }
         }
@@ -98,7 +101,7 @@
         function setToHover(element) {
             for (let i = 0; i < childs.length; ++i) {
                 let el = childs[i].children[0];
-                if (element.id == 'item'+i) {
+                if (element.id == 'item'+i && el.state != states[1]) {
                     el.state = states[2];
                     el.classList.add("hover");
                 }
@@ -108,7 +111,7 @@
         function outHover(element) {
             for (let i = 0; i < childs.length; ++i) {
                 let el = childs[i].children[0];
-                if (element.id == 'item'+i) {
+                if (element.id == 'item'+i && el.state != states[1]) {
                     el.state = states[0];
                     el.classList.remove("hover");
                 }
@@ -126,7 +129,7 @@
             for(let i = 0; i < childs.length; ++i){
                 let el = childs[i].children[0];
                 if (el.state == states[1]){
-                    console.log(el.id)
+                    console.log(el.id);
                 }
             }
         }
@@ -135,9 +138,33 @@
             for(let i = 0; i < childs.length; ++i){
                 let el = childs[i].children[0];
                 if (el.state == states[2]){
-                    console.log(el.id)
+                    console.log(el.id);
                 }
             }
+        }
+
+        function post(name, id) {
+            var xhr = new XMLHttpRequest();
+            var url = "http://localhost:3000/setItem";
+            var params = "name="+name+"&id="+id;
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+            xhr.send(params);
+        }
+
+        function get() {
+            var xhr= new XMLHttpRequest();
+            var url = "http://localhost:3000/item"
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange= function() {
+                if (this.status!==200) return; // or whatever error handling you want
+                let id = this.responseText || null;
+                console.log(id);
+                var el;
+                if(id != null) el = document.getElementById('item'+id);
+                if(el != null) setToClicked(el);
+            };
+            xhr.send();
         }
     </script>
 </body>
