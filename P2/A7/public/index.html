@@ -20,7 +20,7 @@
         <label id="title">Pulps</label>
     </header>
 
-    <nav class="horizontal">
+    <nav class="horizontal" id="menu">
         <ul>
             <li class="col-menu"><a href="#">Home</a></li>
             <li class="col-menu"><a href="#">Comic Books</a></li>
@@ -60,5 +60,51 @@
     <footer>
         Golden Pulps: A Comic Book Resource for Collectors and Fans
     </footer>
+
+    <script>
+        var menu = document.getElementById("menu");
+        var childs = menu.children[0].children;
+        var states = ['Normal', 'Clicked', 'Hover'];
+        setInitialStates();
+
+        menu.addEventListener("click", function(e){
+            let target = e.target;
+            setToClicked(target);
+        });
+
+        menu.addEventListener("mouseover", function(e){
+            let target = e.target;
+            setToHover(target);
+        });
+
+        function setToClicked(element) {
+            for (let i = 0; i < childs.length; ++i) {
+                let el = childs[i].children[0];
+                if (element.id == 'item'+i) {
+                    el.state = states[1];
+                } else {
+                    el.state = states[0];
+                }
+            }
+        }
+
+        function setToHover(element) {
+            for (let i = 0; i < childs.length; ++i) {
+                let el = childs[i].children[0];
+                if (element.id == 'item'+i) {
+                    el.state = states[2];
+                } else {
+                    el.state = states[0];
+                }
+            }
+        }
+
+        function setInitialStates() {
+            for (let i = 0; i < childs.length; ++i) {
+                childs[i].children[0].id = 'item' + i;
+                childs[i].children[0].state = states[0];
+            }
+        }
+    </script>
 </body>
 </html>
