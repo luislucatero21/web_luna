@@ -1,3 +1,12 @@
+/*
+Laboratory 7.
+Authors:    Natanael Pérez Bucio - A01371010
+            Luis Ángel Lucatero - A01020507
+Date:   17/Oct/2018
+
+Filename: app.js
+*/
+
 const express = require('express')
 const app = express()
 const port = 3000
