@@ -87,8 +87,10 @@
                 let el = childs[i].children[0];
                 if (element.id == 'item'+i) {
                     el.state = states[1];
+                    el.classList.add("clicked");
                 } else {
                     el.state = states[0];
+                    el.classList.remove("clicked");
                 }
             }
         }
@@ -98,8 +100,7 @@
                 let el = childs[i].children[0];
                 if (element.id == 'item'+i) {
                     el.state = states[2];
-                } else {
-                    el.state = states[0];
+                    el.classList.add("hover");
                 }
             }
         }
@@ -109,6 +110,7 @@
                 let el = childs[i].children[0];
                 if (element.id == 'item'+i) {
                     el.state = states[0];
+                    el.classList.remove("hover");
                 }
             }
         }
