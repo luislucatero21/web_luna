@@ -1,0 +1,14 @@
+{
+  "name": "itesm_food",
+  "version": "1.0.0",
+  "description": "School Project for creating an online store for external food into ITESM CEM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

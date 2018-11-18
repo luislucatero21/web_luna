@@ -1,0 +1,35 @@
+<!--    Autor: Natanael Pérez Bucio
+        Matrícula: A01371010
+        
+        Solo es necesario agregar el código al final de cualquier html...
+-->
+
+<script>
+    const divs = document.getElementsByTagName('div');
+    const maxValue = getMaxDiv(divs);
+    setH1(maxValue);
+
+    function setH1(maxValue){
+        var h1Printer = document.createElement('h1');
+        var t = document.createTextNode(maxValue);
+        h1Printer.appendChild(t);
+        document.body.appendChild(h1Printer);
+
+    }
+
+    function getMaxDiv(divs){
+        var maxValue = 0;
+        var position = -1;
+        for(let i = 0; i < divs.length; ++i){
+            var son = divs[i].children
+            if(son.length > maxValue){
+                maxValue = son.length
+                position = i
+            }
+        }
+        console.log(maxValue);
+        console.log(divs[position]);
+        return maxValue;
+    }
+
+</script>

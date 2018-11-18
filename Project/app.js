@@ -1,14 +1,20 @@
 const express = require('express');
+var users = require('./routes/users');
+let db = require('./db');
 
 const app = express();
 
 const port = 3000;
 
-app.use(express.json());
+db.connect();
+db.test();
 
+app.use(express.json());
 app.use(express.urlencoded());
 
 app.use(express.static('public'));
+
+app.use('/users',users);
 
 app.use((req, res, next) => res.send("Error 404"));
 

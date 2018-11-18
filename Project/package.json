@@ -1,14 +1,16 @@
 {
-  "name": "itesm_food",
+  "name": "new",
   "version": "1.0.0",
-  "description": "School Project for creating an online store for external food into ITESM CEM",
-  "main": "app.js",
+  "description": "My first node application.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Natanael Pérez",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.4"
   }
 }
