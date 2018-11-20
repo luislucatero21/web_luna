@@ -6,7 +6,7 @@ body {
 	color: #666;
 	background: #f2f2f2; 
 	font-size: 1em;
-    line-height: 1.5em;
+    
     background-color: #C0635D;
 }
 
@@ -28,6 +28,7 @@ img {
 }
 
 #main-header {
+	position: relative;
 	background: #C04941;
 	color: white;
 	height: 8em;
@@ -36,7 +37,7 @@ img {
 		color: white;
     }
     
-    #main-header img{
+    #main-header .side-logo{
         width: auto;
         height: 4em;
     }
@@ -63,4 +64,17 @@ img {
 #logo-shop-cart{
         float: right;
         padding: 2em 60px 2em 0px;
+}
+
+#logo-tec-food{
+	height: 5em;
+	float: left;
+	padding: 1em 60px 1em 25px;
+}
+
+#main-header #text-header{
+	float: left;
+	font-size: 4em;
+	text-emphasis: uppercase;
+	padding: 20px 60px 2em 0px;
 }
