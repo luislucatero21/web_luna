@@ -161,8 +161,19 @@
                 let id = this.responseText || null;
                 console.log(id);
                 var el;
-                if(id != null) el = document.getElementById('item'+id);
-                if(el != null) setToClicked(el);
+                if(id != -1) el = document.getElementById('item'+id); 
+                if(id != null) {
+                    if(el.text == 'Home'){
+                        setToClicked(document.getElementById('item0'));
+                        return;
+                    }
+                    el = document.getElementById('item'+id);
+                    let text1 = el.text;
+                    el.text = document.getElementById('item0').text;
+                    document.getElementById('item0').text = text1;
+                }
+
+                if(el != null) setToClicked(document.getElementById('item0'));
             };
             xhr.send();
         }
