@@ -130,5 +130,57 @@
         		This a text in the footer. <a href="#">Awesome</a> <a href="#">Music</a> <a href="#">About us</a>
         	</div>
         </footer>
+        <script>
+                /*const divs = document.getElementsByTagName('div');
+                const maxValue = getMaxDiv(divs);
+                setH1(maxValue);
+
+                function setH1(maxValue){
+                    var h1Printer = document.createElement('h1');
+                    var t = document.createTextNode(maxValue);
+                    h1Printer.appendChild(t);
+                    document.body.appendChild(h1Printer);
+
+                }
+
+                function getMaxDiv(divs){
+                    var maxValue = 0;
+                    var position = -1;
+                    for(let i = 0; i < divs.length; ++i){
+                        var son = divs[i].children
+                        if(son.length > maxValue){
+                            maxValue = son.length
+                            position = i
+                        }
+                    }
+                    console.log(maxValue);
+                    console.log(divs[position]);
+                    return maxValue;
+                }*/
+    
+                function Ninja(){  
+                    this.whoAmI = function(){
+                    return this;
+                    }.bind(this);
+                } 
+
+                var ninja1 = new Ninja(); 
+                var ninja2 = {
+                    whoAmI: ninja1.whoAmI
+                };  
+
+                
+                if(ninja1.whoAmI() === ninja1){
+                    console.log(ninja1.whoAmI());
+                    console.log("ninja1");
+                }
+                if(ninja2.whoAmI() === ninja2){
+                    console.log(ninja2.whoAmI());
+                    console.log("ninja2");
+                }
+
+
+
+        </script>
     </body>
 </html>
