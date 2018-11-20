@@ -23,7 +23,7 @@ body {
 
 .big-container{
     display: grid;
-    grid-template-columns: 1.3fr .7fr;
+    grid-template-columns: 1.3fr .6fr;
     border: 5px;
     border-radius: 25px;
     margin: 62px;
@@ -44,13 +44,15 @@ body {
 }
 
 .button{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
     display: block;
-    background: #4E9CAF;
-    padding: 10px;
+    background: #741E18;
     text-align: center;
     border-radius: 5px;
     color: white;
-    font-weight: bold;
+    padding: 20px;
 }
 
 #big-logo{
