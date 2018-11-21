@@ -1,7 +1,7 @@
 //CONTROLLERS
 
 var AJV = require('ajv');
-var schema = require('../schemas/users');
+/*var schema = require('../schemas/users');*/
 
 var db = require('../db');
 
@@ -9,10 +9,10 @@ var ajv = new AJV({});
 
 controller = {};
 
-controller.getUsers = function(){
+controller.getBussiness = function(){
     var promise = new Promise(
         function (resolve, reject){
-            db.getConnection().query("select * from Users;", 
+            db.getConnection().query("select * from Bussiness;", 
                 function (err, rows){
                     if (err){
                         reject(err);
@@ -25,10 +25,10 @@ controller.getUsers = function(){
     return promise;
 }
 
-controller.getUser = function(id){
+controller.getBussinessProducts = function(id){
     var promise = new Promise(
         function (resolve, reject){
-            db.getConnection().query("select id,  user_name, email, password from users where id = "+id+";", 
+            db.getConnection().query("select id,  product_name, bussiness_id, description, price from products where bussiness_id = "+id+";", 
                 function (err, rows){
                     if (err){
                         reject(err);
@@ -41,10 +41,10 @@ controller.getUser = function(id){
     return promise;
 }
 
-controller.addUser = function(element){
+controller.addBussiness = function(element){
     var promise = new Promise(
         function (resolve, reject){
-            db.getConnection().query("insert into users(user_name, email, password) values ('"+ element.user_name + "', '"+ element.email +"', '"+ element.password +"');",
+            db.getConnection().query("insert into bussiness(bussiness_name, email, phone, adress, owner_name, password) values ('" + element.bussiness_name + "', '"+ element.email +"', '"+ element.phone +"', '"+ element.adress +"', '"+ element.owner_name +"', '"+ element.password +"');",
                 function (err, rows){
                     if (err){
                         reject(err);
@@ -60,7 +60,7 @@ controller.addUser = function(element){
 controller.updateUser = function(element, id){
     var promise = new Promise(
         function (resolve, reject){
-            db.getConnection().query("update users set user_name = '" + element.user_name + "', email = '" + element.email + "', password = '" + element.password + "' where id = " + id +"; ",
+            db.getConnection().query("update bussiness set bussiness_name = '" + element.bussiness_name + "', email = '" + element.email + "', phone = '" + element.phone + "', adress = '" + element.adress + "', owner_name = '" + element.owner_name + "', password = '" + element.password + "' where id = " + id +"; ",
                 function (err, rows){
                     if (err){
                         reject(err);
@@ -72,5 +72,6 @@ controller.updateUser = function(element, id){
     );
     return promise;
 }
+
 
 module.exports = controller;

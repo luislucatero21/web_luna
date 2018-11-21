@@ -9,7 +9,7 @@ var schema = {
         "password"
     ],
     "properties": {
-        "id": {"type": "number"},
+        "id": {"type": ["number","null"]},
         "user_name": {"type": "string"},
         "email": {"type": "string"},
         "password": {"type": "string"}
