@@ -1,12 +1,12 @@
 const express = require('express');
-var users = require('./routes/users');
 let db = require('./db');
 
-const app = express();
+//let auth = require('./routes/auth');
+let users = require('./routes/users');
 
+const app = express();
 const port = 3000;
 
-db.connect();
 db.test();
 
 app.use(express.json());
