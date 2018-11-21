@@ -6,7 +6,7 @@ body {
 	color: #666;
 	background: #f2f2f2; 
 	font-size: 1em;
-    
+    color:white;
     background-color: #C0635D;
 }
 
@@ -18,7 +18,7 @@ h1 {
 	font-weight: 300;
 }
 
-p {
+header p {
 	margin: 0 0 1.5em 0;
 }
 
@@ -77,4 +77,21 @@ img {
 	font-size: 4em;
 	text-emphasis: uppercase;
 	padding: 20px 60px 2em 0px;
+}
+
+.col-1-4{
+	background-color: #C04941;
+	width: 20%;
+	height: 5em;
+}
+
+.container{
+	display: grid;
+	width: 100%;
+}
+
+.mini-container{
+	padding: 2em;
+	margin: 2em;
+	text-align: center;
 }
